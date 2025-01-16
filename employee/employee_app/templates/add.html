@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>create The form </h1>
+    <form action="{% url 'main_file'%}" method="post">
+        {% csrf_token %}
+
+        <label for="">Enter name</label>
+        <input type="text" name="uname"> <br>
+
+        <label for="">Email id</label>
+        <input type="email" name="email"> <br>
+
+        <label for="">Mobail no</label>
+        <input type="text" name="phone"> <br>
+
+        <label for="">Message</label>
+        <textarea type="text" name="msg">Message</textarea> <br>
+
+        <input type="submit" value="send"> <br>
+        
+        
+    </form>
+</body>
+</html>

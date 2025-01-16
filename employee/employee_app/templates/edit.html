@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Data </h1>
+    <form action="{% url 'main_file' %}" method="post">
+        {% csrf_token %}
+
+        <label for="">Enter name</label>
+        <input type="text" name="uname"  value="{{data.0.name}}"> <br>
+
+        <label for="">Email id</label>
+        <input type="email" name="email" value="{{data.0.email}}"> <br>
+
+        <label for="">Mobail no</label>
+        <input type="text" name="phone" value="{{data.0.number}}"> <br>
+
+        <label for="">Message</label>
+        <textarea type="text" name="msg">Message  value="{{data.0.Message}}"</textarea> <br>
+
+        <input type="submit" value="send"> <br>
+        
+        
+    </form>
+</body>
+</html>

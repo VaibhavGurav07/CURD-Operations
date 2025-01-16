@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Table data</h1>
+    <button>
+        <a>click hear to add </a>
+    </button>
+    <table style="border: 2px soli black;">
+        <thead>
+            <tr>
+                <th>sr.no</th>
+                <th>name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Number</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+    
+        </thead>
+        {% for d in data %}
+        <tbody>
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.email}}</td>
+                <td>{{d.Message}}</td>
+                <td>{{d.Number}}</td>
+                <td><a href="/edit/{{d.id}}">Edit</a></td>
+                <td><a href="/delete/{{d.it}}">Delete</a></td>
+            </tr>
+        </tbody>
+        {% endfor %}
+
+    </table>
+</body>
+
+</html>
